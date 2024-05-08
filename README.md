@@ -44,3 +44,29 @@ Pada praktikum ini, Anda akan menggunakan starter code yang sudah ada, lalu mela
 - `Integrasi dengan PostgreSQL di Vercel:` Melakukan proses seed data ke basis data PostgreSQL yang sudah disiapkan di layanan Vercel.
 
 - `Troubleshooting:` Mengatasi beberapa masalah umum seperti kekurangan modul, kesalahan path, atau kesalahan sintaks dalam skrip seed.
+
+## Soal 4
+#### Capture hasil query Anda dan buatlah laporan di file README.md. Jelaskan apa yang telah Anda pelajari ? Cobalah eksekusi query SQL yang lain sesuai kreasi Anda, capture hasilnya dan jelaskan!
+
+![Screenshot P1](assets-report/praktikum1soal4a.jpg)
+
+- `Eksplorasi Basis Data:` Menjelajahi tabel-tabel yang ada dalam basis data PostgreSQL di Vercel melalui antarmuka pengguna Vercel.
+#
+
+![Screenshot P1](assets-report/praktikum1soal4b.jpg)
+
+- `Eksekusi Query SQL:` Menggunakan antarmuka pengguna Vercel untuk mengeksekusi query SQL dan mendapatkan hasilnya.
+#
+
+```sql
+SELECT invoices.amount, customers.name
+FROM invoices
+JOIN customers ON invoices.customer_id = customers.id
+WHERE invoices.amount = 666;
+```
+
+- Pada contoh diatas, query digunakan untuk `menggabungkan tabel invoices dan customers` berdasarkan `customer_id dan id`, kemudian `menampilkan amount dan name` dari tabel tersebut yang dimana `amount = 666`.
+
+![Screenshot P1](assets-report/praktikum1soal4c.jpg)
+
+- `Pemahaman Struktur Tabel dan Relasi:` Memahami relasi antara tabel-tabel yang ada dalam basis data dan cara melakukan join untuk mengambil data dari beberapa tabel sekaligus.
