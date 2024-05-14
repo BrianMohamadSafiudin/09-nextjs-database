@@ -70,3 +70,30 @@ WHERE invoices.amount = 666;
 ![Screenshot P1](assets-report/praktikum1soal4c.jpg)
 
 - `Pemahaman Struktur Tabel dan Relasi:` Memahami relasi antara tabel-tabel yang ada dalam basis data dan cara melakukan join untuk mengambil data dari beberapa tabel sekaligus.
+---
+
+# Praktikum 2: Fetching Data (API)
+
+Pada praktikum ini, Anda dapat melanjutkan project dari praktikum 1 sebelumnya.
+
+## Soal 5
+#### Lakukan push, kemudian perhatikan di akun dashboard Vercel project Anda. Capture dan lampirkan link aplikasi Anda yang telah berhasil di deploy, kemudian buatlah laporan di file README.md. Jelaskan apa yang telah Anda pelajari ?
+
+- Link: nextjs-dashboard-kappa-ashy-95.vercel.app 
+
+![Screenshot P2](assets-report/praktikum2soal5.jpg)
+
+- `Struktur Folder Project:` Pentingnya memiliki struktur folder yang terorganisir untuk menyimpan berbagai jenis file, seperti model, utils, dan components.
+
+- `Membuat Type Definitions:` Membuat tipe data di definitions.tsx yang menggambarkan bentuk dan tipe data dari berbagai entitas seperti User, Customer, Invoice, Revenue, dll. Ini penting untuk memastikan bahwa data yang diambil dari database memiliki struktur yang tepat.
+
+- `Fetching Data dengan SQL:` Menggunakan sql dari @vercel/postgres untuk melakukan query ke database dan mengambil data yang diperlukan. Fungsi seperti fetchRevenue, fetchLatestInvoices, dan fetchCardData digunakan untuk mendapatkan data dari berbagai tabel dan menggabungkannya jika diperlukan.
+
+- `Menghindari Caching Data:` Untuk memastikan data yang diambil selalu up-to-date, menggunakan noStore() yang setara dengan fetch(..., {cache: 'no-store'}) untuk mencegah caching response.
+
+- `Menggunakan Utility Functions:` Membuat utility functions di utils.tsx seperti formatCurrency untuk format mata uang, formatDateToLocal untuk format tanggal, generateYAxis untuk menghasilkan label sumbu Y pada grafik, dan generatePagination untuk membuat pagination dinamis.
+
+- `Membuat Komponen Atom dan Molekul:` Membuat komponen atom untuk font di atoms/fonts.tsx dan beberapa komponen molekul seperti card.tsx, latest-invoices.tsx, dan revenue-chart.tsx. Ini membantu dalam membangun UI yang modular dan mudah di-maintain.
+
+- `Mengintegrasikan Komponen di Halaman Utama:` Mengintegrasikan komponen-komponen tersebut di halaman utama (page.tsx) dan menggunakan data yang telah difetch untuk menampilkan informasi dalam bentuk kartu, grafik pendapatan, dan daftar faktur terbaru.
+
