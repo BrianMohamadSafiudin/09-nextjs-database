@@ -79,7 +79,7 @@ Pada praktikum ini, Anda dapat melanjutkan project dari praktikum 1 sebelumnya.
 ## Soal 5
 #### Lakukan push, kemudian perhatikan di akun dashboard Vercel project Anda. Capture dan lampirkan link aplikasi Anda yang telah berhasil di deploy, kemudian buatlah laporan di file README.md. Jelaskan apa yang telah Anda pelajari ?
 
-- Link: nextjs-dashboard-kappa-ashy-95.vercel.app 
+- Link: https://nextjs-dashboard-kappa-ashy-95.vercel.app 
 
 ![Screenshot P2](assets-report/praktikum2soal5.jpg)
 
@@ -97,3 +97,13 @@ Pada praktikum ini, Anda dapat melanjutkan project dari praktikum 1 sebelumnya.
 
 - `Mengintegrasikan Komponen di Halaman Utama:` Mengintegrasikan komponen-komponen tersebut di halaman utama (page.tsx) dan menggunakan data yang telah difetch untuk menampilkan informasi dalam bentuk kartu, grafik pendapatan, dan daftar faktur terbaru.
 
+## Soal 6
+#### Lakukan capture dan push hasilnya, kemudian buatlah laporan di file README.md. Jelaskan apa yang telah Anda pelajari ?
+
+![Screenshot P2](assets-report/praktikum2soal6.jpg)
+
+- `Pengaturan Grid dan Flexbox:` Menggunakan grid CSS dan flexbox untuk mengatur tata letak dalam halaman web. Ini meliputi pengaturan sumbu x dan y, serta penempatan elemen-elemen di dalamnya.
+
+- `Penanganan Masalah Tata Letak:` Menangani masalah tata letak yang umum terjadi, seperti ketidaksejajaran antara elemen-elemen dalam grid atau flexbox.
+
+- `Penggunaan Properti CSS:` Properti CSS seperti width dan flex dapat digunakan untuk mengontrol tampilan dan perilaku elemen-elemen dalam tata letak.
