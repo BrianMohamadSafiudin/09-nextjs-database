@@ -107,3 +107,16 @@ Pada praktikum ini, Anda dapat melanjutkan project dari praktikum 1 sebelumnya.
 - `Penanganan Masalah Tata Letak:` Menangani masalah tata letak yang umum terjadi, seperti ketidaksejajaran antara elemen-elemen dalam grid atau flexbox.
 
 - `Penggunaan Properti CSS:` Properti CSS seperti width dan flex dapat digunakan untuk mengontrol tampilan dan perilaku elemen-elemen dalam tata letak.
+
+## Soal 7
+#### Lakukan capture dan push hasilnya, kemudian buatlah laporan di file README.md. Jelaskan apa yang telah Anda pelajari ?
+
+![Screenshot P2](assets-report/praktikum2soal7.jpg)
+
+- Kueri SQL yang digunakan untuk `mengambil 5 invoices terakhir` adalah contoh konkret bagaimana cara membatasi jumlah data yang diambil langsung dari basis data. Ini dilakukan dengan menggunakan klausa `ORDER BY` untuk mengurutkan data berdasarkan tanggal dalam urutan menurun dan `LIMIT 5` untuk membatasi hasilnya.
+
+- Penggunaan await sql`<LatestInvoiceRaw>` menunjukkan bagaimana mengintegrasikan kueri SQL dalam file TypeScript untuk mengambil data dari basis data dan bagaimana hasilnya dapat diolah lebih lanjut dalam aplikasi.
+
+- Kueri SQL yang diberikan menunjukkan penggunaan `JOIN` untuk menggabungkan data dari tabel `invoices` dan `customers`. Ini penting untuk mendapatkan data yang lebih lengkap dan relevan dari beberapa tabel basis data.
+
+- Jika gambar profil tidak muncul, ini bisa disebabkan karena aset gambar yang tidak ada. Memastikan semua aset gambar tersedia dan ditempatkan pada path yang benar `(public\customers\...)` adalah langkah penting untuk memastikan gambar dapat di-load dengan benar.
