@@ -120,3 +120,37 @@ Pada praktikum ini, Anda dapat melanjutkan project dari praktikum 1 sebelumnya.
 - Kueri SQL yang diberikan menunjukkan penggunaan `JOIN` untuk menggabungkan data dari tabel `invoices` dan `customers`. Ini penting untuk mendapatkan data yang lebih lengkap dan relevan dari beberapa tabel basis data.
 
 - Jika gambar profil tidak muncul, ini bisa disebabkan karena aset gambar yang tidak ada. Memastikan semua aset gambar tersedia dan ditempatkan pada path yang benar `(public\customers\...)` adalah langkah penting untuk memastikan gambar dapat di-load dengan benar.
+---
+
+# Tugas Praktikum
+#### 1. Jika Anda perhatikan pada file src\app\page.tsx untuk komponen Card sebenarnya telah dibuat sebagai molecules pada file src\app\components\molecules\card.tsx yaitu komponen CardWrapper, silakan Anda sesuaikan.
+
+- Mengubah nama komponen `Card` menjadi `CardWrapper` di file src\app\page.tsx.
+
+```tsx
+import CardWrapper from "@/app/components/molecules/card"
+```
+
+![Screenshot TP](assets-report/tugaspraktikum.jpg)
+
+#### 2. Perhatikan fungsi fetchCardData() (pada file src\model\query.tsx) dari soal nomor 1. Jelaskan maksud kode dan kueri yang dilakukan dalam fungsi tersebut!
+
+- Fungsi `fetchCardData()` mengumpulkan data penting dari tabel invoices dan customers untuk ditampilkan di dashboard. Fungsi ini menggunakan beberapa kueri SQL untuk menghitung jumlah faktur, jumlah pelanggan, dan total nilai faktur berdasarkan statusnya. Dengan menjalankan kueri secara paralel dan memastikan respons tidak disimpan dalam cache, fungsi ini memberikan data terbaru dan efisien.
+
+- Fungsi `noStore()` digunakan untuk mencegah response dari fungsi ini disimpan dalam cache. Ini memastikan bahwa data yang diambil selalu yang terbaru setiap kali fungsi ini dipanggil.
+
+- `invoiceCountPromise:` Menghitung jumlah total faktur (invoices) dalam tabel invoices.
+
+- `customerCountPromise:` Menghitung jumlah total pelanggan (customers) dalam tabel customers.
+
+- `invoiceStatusPromise:` Menghitung jumlah total nilai faktur yang sudah dibayar (paid) dan yang masih pending (pending) dalam tabel invoices. Dua SUM digunakan untuk mengakumulasi nilai berdasarkan status faktur.
+
+- `Promise.all` digunakan untuk menjalankan ketiga kueri secara paralel. Ini membantu mengoptimalkan waktu respons dengan mengeksekusi semua kueri secara bersamaan.
+
+- `numberOfInvoices:` Mengambil jumlah faktur dari hasil kueri pertama dan mengonversinya menjadi angka.
+
+- `numberOfCustomers:` Mengambil jumlah pelanggan dari hasil kueri kedua dan mengonversinya menjadi angka.
+
+- `totalPaidInvoices:` Mengambil jumlah total faktur yang sudah dibayar dari hasil kueri ketiga, kemudian memformatnya sebagai mata uang menggunakan fungsi formatCurrency.
+
+- `totalPendingInvoices:` Mengambil jumlah total faktur yang masih pending dari hasil kueri ketiga, kemudian memformatnya sebagai mata uang menggunakan fungsi formatCurrency.
