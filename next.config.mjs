@@ -1,4 +1,22 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.html$/,
+      use: 'html-loader'
+    });
 
-export default nextConfig;
+    return config;
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/login',
+        permanent: true,
+      },
+    ];
+  },
+};
+  
+  export default nextConfig;
+  

@@ -179,3 +179,22 @@ Melanjutkan dari praktikum sebelumnya, sekarang Anda perlu persiapkan untuk tamp
 #### Capture hasil form login yang telah dibuat dan buatlah laporan di README.md.
 
 - Dalam praktikum ini, mengimplementasikan tampilan form login dan fungsi sign in sesuai dengan langkah-langkah yang diberikan. Form login ini mencakup input email dan password, tombol login, serta pesan error yang muncul jika login gagal. Form ini juga menggunakan useFormState dan useFormStatus untuk menangani state dan aksi pada form. 
+---
+
+# W10 Praktikum 3: Menambah Fungsi Logout
+
+Pada praktikum ini, Anda akan menambahkan fungsi Logout
+
+## Soal 3
+#### Silakan save semua dan lakukan running di browser Anda. Capture hasilnya dan buatlah laporan di README.md.
+
+1. Apakah ada error atau fitur yang belum berfungsi ? jika belum, silakan perbaiki!
+- Terdapat beberapa error, sudah saya fix dan berfungsi dengan baik.
+
+![Screenshot W10P3](assets-report/w10praktikum3soal3a.jpg)
+
+2. Apakah ketika mengakses path URL root ( / ) dialihkan ke halaman login ? jika belum, silakan perbaiki!
+- Pada awalnya belum, sudah saya alihkan ke halaman login.
+
+![Screenshot W10P3](assets-report/w10praktikum3soal3b.gif)
+

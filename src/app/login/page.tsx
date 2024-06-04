@@ -1,4 +1,4 @@
-import AcmeLogo from '../../utils/acme-logo';
+import AcmeLogo from '../components/atoms/acme-logo';
 import LoginForm from '@/app/components/molecules/login-form';
  
 export default function LoginPage() {
