@@ -4,6 +4,13 @@ import Credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 
+type User = {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+};
+
 async function getUser(email: string): Promise<User | undefined> {
     try {
         const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;

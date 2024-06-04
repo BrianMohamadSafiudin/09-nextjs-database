@@ -15,7 +15,7 @@ export default function middleware(req: NextRequest) {
   }
 
   // Call the NextAuth middleware for other requests
-  return auth(req);
+  return auth();
 }
 
 export const config = {
