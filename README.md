@@ -169,4 +169,13 @@ Membuat key rahasia untuk enkripsi cookie sesi pengguna dengan perintah `openssl
 ![Screenshot W10P1](assets-report/w10praktikum1soal1.jpg)
 
 - Terjadi error pada form login karena belum ada file yang diimpor untuk LoginForm dan AcmeLogo.
+---
 
+# W10 Praktikum 2: Memperbarui Form Login
+
+Melanjutkan dari praktikum sebelumnya, sekarang Anda perlu persiapkan untuk tampilan form login dan fungsi sign in.
+
+## Soal 2
+#### Capture hasil form login yang telah dibuat dan buatlah laporan di README.md.
+
+- Dalam praktikum ini, mengimplementasikan tampilan form login dan fungsi sign in sesuai dengan langkah-langkah yang diberikan. Form login ini mencakup input email dan password, tombol login, serta pesan error yang muncul jika login gagal. Form ini juga menggunakan useFormState dan useFormStatus untuk menangani state dan aksi pada form. 
