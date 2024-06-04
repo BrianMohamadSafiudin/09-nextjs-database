@@ -11,6 +11,22 @@ type User = {
   password: string;
 };
 
+// Dummy definition of sql for demonstration purposes
+const sql = async <T>(queryTemplate: TemplateStringsArray, ...queryValues: any[]): Promise<{ rows: T[] }> => {
+    console.log('Executing SQL query:', queryTemplate, queryValues);
+        // Simulate a database response
+        return {
+            rows: [
+                {
+                    id: '1',
+                    name: 'John Doe',
+                    email: 'johndoe@example.com',
+                    password: 'hashedpassword',
+                } as T,
+            ],
+        };
+    };
+
 async function getUser(email: string): Promise<User | undefined> {
     try {
         const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
